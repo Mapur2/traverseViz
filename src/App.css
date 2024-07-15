@@ -1,0 +1,117 @@
+.app {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    overflow: hidden;
+    border: 2px solid black;
+    margin-bottom: 5px;
+    box-shadow: 0px 10px 15px gray;
+}
+
+.myElement {
+    position: absolute;
+    border-radius: 50%;
+    cursor: crosshair;
+    z-index: 1;
+    background: gold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.borderEle {
+    border: 2px solid black;
+}
+
+.myElement.selected {
+    background-color: red;
+}
+
+.line {
+    position: absolute;
+    height: 6px;
+    background-color: red;
+    transform-origin: top left;
+    z-index: 0;
+}
+
+.weight {
+    position: absolute;
+    background-color: white;
+    padding: 2px 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.weight-input {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.weight-input input {
+    margin-right: 5px;
+}
+
+.flashit {
+    background-color: blue;
+    color: white;
+    -webkit-animation: flash linear 1s infinite;
+    animation: flash linear 1s infinite;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        transform: scale(1.5, 1.5);
+    }
+
+    50% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1.5, 1.5);
+    }
+}
+
+@keyframes flash {
+    0% {
+        transform: scale(1.5, 1.5);
+    }
+
+    50% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1.5, 1.5);
+    }
+}
+
+.rainbow {
+    animation: colorchange infinite;
+    /* animation-name followed by duration in seconds*/
+    /* you could also use milliseconds (ms) or something like 2.5s */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes colorchange {
+    0% {
+        background: #ff0000;
+    }
+
+    75% {
+        background: #ee82ee;
+    }
+}
