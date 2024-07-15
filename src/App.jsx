@@ -376,6 +376,14 @@ const App = () => {
       }
       await delay()
     }
+    res="Total Cost of Each Node:"
+    setResult(prev => [...prev, res])
+    await delay()
+    for (let i = 0; i < distances.length; i++) {
+      res=i+"->"+distances[i];
+      setResult(prev => [...prev, res])
+      await delay()
+    }
   };
   return (
     <>
